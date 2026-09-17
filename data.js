@@ -4,6 +4,7 @@ const ROADMAP = [
   {
     id: "stage-1",
     title: "Stage 1 — Python Fundamentals",
+    hasLesson: true,
     topics: [
       "Installing Python and setting up an editor (VS Code / PyCharm)",
       "Running scripts vs. using the interactive REPL",
