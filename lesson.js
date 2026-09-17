@@ -102,6 +102,9 @@ function renderExercise(stage, topicIndex, exercise) {
         const progress = loadProgress();
         progress[key] = true;
         saveProgress(progress);
+        const topicSection = document.getElementById(`topic-${topicIndex}`);
+        const markDoneCheckbox = topicSection && topicSection.querySelector(".mark-done-checkbox");
+        if (markDoneCheckbox) markDoneCheckbox.checked = true;
       } else {
         status.textContent = errorMessage ? `❌ Error: ${errorMessage}` : "❌ Not quite — check the expected output above.";
         status.className = "run-status status-fail";

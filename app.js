@@ -49,13 +49,9 @@ function renderStages() {
           <div class="stage-meta">${completeCount} / ${stage.topics.length} topics</div>
         </div>
       </div>
-      <div class="stage-header-right">
-        ${stage.hasLesson ? `<a class="lesson-link" href="lesson.html?stage=${stage.id}">Open lesson →</a>` : ""}
-        <div class="stage-caret">▶</div>
-      </div>
+      <div class="stage-caret">▶</div>
     `;
-    header.addEventListener("click", (e) => {
-      if (e.target.closest(".lesson-link")) return;
+    header.addEventListener("click", () => {
       card.classList.toggle("open");
     });
 
