@@ -1,4 +1,5 @@
-/* Site-wide sidebar navigation. Fixed on desktop, slide-out on mobile. */
+/* Site-wide sidebar navigation — a fixed panel toggled open/closed by a
+   button that's always visible, on every screen size, on every page. */
 
 .nav-toggle {
   position: fixed;
@@ -13,7 +14,23 @@
   border-radius: 8px;
   font-size: 1.1rem;
   cursor: pointer;
-  display: none;
+  transition: left 0.2s ease;
+}
+
+body.nav-collapsed .nav-toggle {
+  left: 14px;
+}
+
+body:not(.nav-collapsed) .nav-toggle {
+  left: 254px;
+}
+
+@media (max-width: 880px) {
+  /* On narrow screens the sidebar overlays content, so keep the toggle
+     pinned to the corner regardless of open/closed state. */
+  body:not(.nav-collapsed) .nav-toggle {
+    left: 14px;
+  }
 }
 
 .site-nav {
@@ -27,6 +44,13 @@
   overflow-y: auto;
   z-index: 30;
   padding-bottom: 24px;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+body.nav-collapsed .site-nav {
+  transform: translateX(-100%);
+  box-shadow: none;
 }
 
 .site-nav-header {
@@ -100,27 +124,25 @@
   white-space: nowrap;
 }
 
-/* Page content is offset to make room for the fixed sidebar on desktop. */
+/* Page content is offset to make room for the sidebar when it's open,
+   and snaps back to full width when it's collapsed. */
 .page-shell {
   margin-left: 240px;
+  transition: margin-left 0.2s ease;
+}
+
+body.nav-collapsed .page-shell {
+  margin-left: 0;
 }
 
 @media (max-width: 880px) {
-  .nav-toggle {
-    display: block;
+  /* On narrow screens the sidebar overlays content rather than pushing
+     it — the shell never needs to make room for it. */
+  .page-shell {
+    margin-left: 0;
   }
 
   .site-nav {
-    transform: translateX(-100%);
-    transition: transform 0.2s ease;
     box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
-  }
-
-  .site-nav.nav-open {
-    transform: translateX(0);
-  }
-
-  .page-shell {
-    margin-left: 0;
   }
 }
