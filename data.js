@@ -29,6 +29,7 @@ const ROADMAP = [
   {
     id: "stage-3",
     title: "Stage 3 — Logic, Conditions & Loops",
+    hasLesson: true,
     topics: [
       "if / elif / else statements",
       "Boolean logic and truthy/falsy values",
@@ -40,6 +41,7 @@ const ROADMAP = [
   {
     id: "stage-4",
     title: "Stage 4 — Data Structures",
+    hasLesson: true,
     topics: [
       "Lists: indexing, slicing, common methods",
       "Tuples and immutability",
@@ -52,6 +54,7 @@ const ROADMAP = [
   {
     id: "stage-5",
     title: "Stage 5 — Functions & Modular Programming",
+    hasLesson: true,
     topics: [
       "Defining functions, parameters, and return values",
       "Default, keyword, and variadic arguments (*args, **kwargs)",
@@ -64,6 +67,7 @@ const ROADMAP = [
   {
     id: "stage-6",
     title: "Stage 6 — Files, Errors & Exceptions",
+    hasLesson: true,
     topics: [
       "Reading and writing text files",
       "Working with CSV and JSON files",
@@ -75,6 +79,7 @@ const ROADMAP = [
   {
     id: "stage-7",
     title: "Stage 7 — Object-Oriented Python",
+    hasLesson: true,
     topics: [
       "Classes, objects, attributes, and methods",
       "__init__ and instance vs class attributes",
@@ -87,6 +92,7 @@ const ROADMAP = [
   {
     id: "stage-8",
     title: "Stage 8 — Advanced Python",
+    hasLesson: true,
     topics: [
       "Iterators and generators (yield)",
       "Decorators",
@@ -99,6 +105,7 @@ const ROADMAP = [
   {
     id: "stage-9",
     title: "Stage 9 — APIs & Web Requests",
+    hasLesson: true,
     topics: [
       "HTTP basics: methods, status codes, headers",
       "Making requests with the requests library",
@@ -110,6 +117,7 @@ const ROADMAP = [
   {
     id: "stage-10",
     title: "Stage 10 — Databases & SQL",
+    hasLesson: true,
     topics: [
       "Relational database basics and SQL fundamentals",
       "Connecting to SQLite/PostgreSQL from Python",
@@ -121,6 +129,7 @@ const ROADMAP = [
   {
     id: "stage-11",
     title: "Stage 11 — Automation & Web Scraping",
+    hasLesson: true,
     topics: [
       "Automating repetitive tasks with scripts",
       "Parsing HTML with BeautifulSoup",
@@ -132,6 +141,7 @@ const ROADMAP = [
   {
     id: "stage-12",
     title: "Stage 12 — Build Real-World Projects",
+    hasLesson: true,
     topics: [
       "Planning a project: scope, requirements, structure",
       "Version control fundamentals with Git and GitHub",
@@ -143,6 +153,7 @@ const ROADMAP = [
   {
     id: "stage-13",
     title: "Stage 13 — Data Science & Machine Learning",
+    hasLesson: true,
     topics: [
       "NumPy fundamentals",
       "Data manipulation with pandas",
@@ -154,6 +165,7 @@ const ROADMAP = [
   {
     id: "stage-14",
     title: "Stage 14 — Web Development & Backend",
+    hasLesson: true,
     topics: [
       "Web framework basics (Flask or Django)",
       "Routing, templates, and request handling",
@@ -165,6 +177,7 @@ const ROADMAP = [
   {
     id: "stage-15",
     title: "Stage 15 — Deployment & Career Path",
+    hasLesson: true,
     topics: [
       "Deploying a script or app (cloud platform of choice)",
       "Environment variables and configuration for production",

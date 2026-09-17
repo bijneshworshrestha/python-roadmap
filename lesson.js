@@ -260,6 +260,26 @@ async function init() {
   if (stage.quiz && stage.quiz.length) {
     container.appendChild(renderQuiz(stage, stage.quiz));
   }
+
+  renderStagePager(stageId);
+}
+
+function renderStagePager(stageId) {
+  const pager = document.getElementById("stage-pager");
+  if (!pager || typeof ROADMAP === "undefined") return;
+
+  const index = ROADMAP.findIndex((s) => s.id === stageId);
+  if (index === -1) return;
+
+  const prev = ROADMAP[index - 1];
+  const next = ROADMAP[index + 1];
+
+  const shortTitle = (s) => s.title.replace(/^Stage \d+ — /, "");
+
+  pager.innerHTML = `
+    ${prev ? `<a class="pager-link pager-prev" href="lesson.html?stage=${prev.id}">← ${shortTitle(prev)}</a>` : "<span></span>"}
+    ${next ? `<a class="pager-link pager-next" href="lesson.html?stage=${next.id}">${shortTitle(next)} →</a>` : "<span></span>"}
+  `;
 }
 
 init();

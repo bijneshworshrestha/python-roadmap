@@ -6,24 +6,34 @@
 <title>Lesson — Python Learning Roadmap</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="lesson.css">
+<link rel="stylesheet" href="nav.css">
 </head>
 <body>
-  <header class="site-header lesson-header">
-    <div class="header-inner">
-      <a href="index.html" class="back-link">← All stages</a>
-      <h1 id="lesson-title">Loading…</h1>
-      <p class="subtitle" id="lesson-intro"></p>
-    </div>
-  </header>
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav id="site-nav" class="site-nav"><!-- Rendered by nav.js --></nav>
 
-  <main id="lesson-container" class="lesson-container">
-    <!-- Rendered by lesson.js -->
-  </main>
+  <div class="page-shell">
+    <header class="site-header lesson-header">
+      <div class="header-inner">
+        <a href="index.html" class="back-link">← All stages</a>
+        <h1 id="lesson-title">Loading…</h1>
+        <p class="subtitle" id="lesson-intro"></p>
+      </div>
+    </header>
 
-  <footer class="site-footer">
-    <p>Python runs directly in your browser here (via <a href="https://pyodide.org" target="_blank" rel="noopener">Pyodide</a>) — nothing you type is sent anywhere.</p>
-  </footer>
+    <main id="lesson-container" class="lesson-container">
+      <!-- Rendered by lesson.js -->
+    </main>
 
+    <nav id="stage-pager" class="stage-pager"><!-- Rendered by lesson.js --></nav>
+
+    <footer class="site-footer">
+      <p>Python runs directly in your browser here (via <a href="https://pyodide.org" target="_blank" rel="noopener">Pyodide</a>) — nothing you type is sent anywhere.</p>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="nav.js"></script>
   <script src="pyodide-runtime.js"></script>
   <script src="lesson.js"></script>
 </body>
